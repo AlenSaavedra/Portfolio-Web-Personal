@@ -549,6 +549,7 @@ li svg {
 .hero-section2 {
     background-color: #0a0a0f;
     min-height: 100vh;
+    height: auto;
     padding: 80px 0;
     position: relative;
 }
