@@ -128,8 +128,6 @@ section {
 
 /*  */
 
-
-
 .nav-toggler {
     border: none;
     font-size: 1.25rem;
@@ -140,6 +138,13 @@ section {
     box-shadow: none;
     outline: none;
 }
+
+.navbar-toggler {
+    border: 2px solid blanchedalmond;
+    background-color: blanchedalmond;
+
+}
+
 
 .nav-link {
     color: blanchedalmond;
@@ -344,6 +349,48 @@ button {
 }
 
 .button2:hover svg path {
+    fill: #181717;
+}
+
+/* BTN NAV */
+.button3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+    gap: 5px;
+    background-color: #000D0C;
+    outline: 3px #000D0C solid;
+    outline-offset: -3px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-right: 20px;
+}
+
+.button3 .text {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1em;
+    transition: 0.3s;
+    margin: 0;
+}
+
+.button3 svg path {
+    transition: 0.3s;
+}
+
+.button3:hover {
+    background-color: transparent;
+    transition: 0.4s;
+}
+
+.button3:hover .text {
+    color: #181717;
+}
+
+.button3:hover svg path {
     fill: #181717;
 }
 
@@ -1072,21 +1119,9 @@ ul {
 
 }
 
-/* Items Skills */
-@media (max-width: 991px) {
-    .login-button {
-        visibility: hidden;
-    }
-
-    .button2 {
-        visibility: hidden;
-    }
 
 
-
-}
-
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .projects-grid {
         grid-template-columns: 1fr;
         padding: 0 1rem;
@@ -1200,4 +1235,212 @@ ul {
     }
 
     /* o el color que prefieras */
+}
+
+/* Media Queries para dispositivos pequeños */
+/*@media (max-width: 991px) {
+
+    .login-button,
+    .button2 {
+        visibility: hidden;
+        //Oculta los botones en pantallas pequeñas 
+    }
+}*/
+
+/* Media Queries para tablets y pantallas medianas */
+@media (max-width: 767px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        /* Una columna en lugar de múltiples */
+        padding: 0 1rem;
+        /* Añade padding */
+    }
+
+
+
+    .title {
+        font-size: 2rem;
+        /* Ajusta el tamaño del título */
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+        /* Ajusta el tamaño del subtítulo */
+    }
+
+    .hero-section {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .main-container img {
+        width: 100%;
+    }
+
+    .container2 {
+        flex-direction: column;
+        gap: 40px;
+        /* Reduce el espacio entre elementos */
+        padding: 0;
+    }
+
+    .container2 .hero-pic {
+        width: 70%;
+        /* Ajusta el tamaño de la imagen */
+        max-width: 100%;
+        /* Asegura que no exceda el contenedor */
+
+    }
+
+
+
+    .hero-text h2 {
+        font-size: 2rem;
+        /* Ajusta el tamaño del texto */
+        text-align: center;
+    }
+
+    .hero-text h5,
+    .hero-text p {
+        font-size: 15px;
+        /* Ajusta el tamaño del texto */
+        text-align: center;
+    }
+
+    .hero-text p {
+        text-wrap: wrap;
+        padding: 10px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        /* Navbar en columna */
+        height: auto;
+        padding: 11px;
+        margin: 0;
+        border: none;
+        border-radius: 0;
+    }
+
+    .offcanvas {
+        margin-top: 70px;
+        height: 45vh;
+        /* Tamaño del offcanvas */
+        background-color: #014040;
+
+        /* Fondo blanco */
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        /* Sombra para profundidad */
+        border-radius: 0 0px 0px 50px;
+    }
+
+    .offcanvas-header {
+        background-color: blanchedalmond;
+        color: blanchedalmond;
+    }
+
+    .offcanvas-title {
+        font-size: 22px;
+        color: #014040;
+        font-weight: 600;
+    }
+
+    .offcanvas-backdrop {
+        visibility: hidden;
+    }
+
+    .navbar-brand {
+        font-size: 22px;
+        /* Ajusta el tamaño de la marca */
+    }
+
+    .nav-link {
+        margin-top: 10px;
+        font-size: 18px;
+        /* Ajusta el tamaño del texto */
+        text-align: center;
+        font-weight: 100;
+    }
+
+    .nav-link:hover {
+        font-weight: 500;
+    }
+
+    .container-form {
+        visibility: hidden;
+    }
+
+    .hero-section3 {
+        display: none;
+    }
+
+
+    .container-contact {
+        visibility: hidden;
+    }
+
+    /* BTN GITHUB */
+    .button3 {
+        visibility: hidden !important;
+
+    }
+}
+
+/* Media Queries para pantallas muy pequeñas */
+@media (max-width: 414px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+        text-align: center;
+        /* Ajusta el tamaño del título */
+    }
+
+    .hero-section h2 {
+        font-size: 1rem;
+
+        /* Ajusta el tamaño del subtítulo */
+    }
+
+    .btn-group {
+        margin: 0;
+        flex-direction: row;
+        align-items: center;
+        padding: 25px;
+    }
+
+    .btn-group .btn {
+        margin: 10px 0;
+        /* Ajusta el margen de los botones */
+    }
+
+    footer {
+        background-color: #000D0C;
+        text-align: center;
+        padding: 1rem;
+        /* Añade padding al pie de página */
+        width: 100%;
+        margin: 0;
+    }
+
+    body {
+        background-color: #000D0C;
+    }
+
+    .txt {
+        visibility: hidden;
+    }
+
+    .caja-img img {
+        visibility: hidden;
+    }
+
+    .example-2 {
+        margin-right: 0;
+        justify-content: center;
+    }
+
+
+    .example-2 .icon-content {
+        margin: 0 10px;
+        /* Aumenta el margen de los iconos */
+    }
 }
